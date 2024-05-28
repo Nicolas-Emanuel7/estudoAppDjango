@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Home Template</h1>
+
+<div>
+
+    <div>
+        {%for sala in salas %}
+
+        <div>
+            <h5>{{sala.id}} -- <a href="{% url 'sala' sala.id %}">{{sala.nome}}</a></h5>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+
+{% endblock content %}
